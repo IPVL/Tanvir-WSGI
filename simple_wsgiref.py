@@ -8,7 +8,7 @@ def application (environ, start_response):
 
     # Sorting and stringifying the environment key, value pairs
     response_body = [
-        '%s: %s' % (key, value) for key, value in sorted(environ.items())
+        '%s: %s' % (key, value) for key, value in sorted(environ.iteritems())
     ]
     response_body = '\n'.join(response_body)
 
